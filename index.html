@@ -3,171 +3,217 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b1220">
 
   <title>بیوگرافی سامان | Saman's Biography</title>
 
-  <!-- SEO meta -->
-  <meta name="description" content="سامان — برنامه‌نویس علاقه‌مند به Python، وب و طراحی. نمونه‌کارها و راه‌های تماس.">
-  <meta name="keywords" content="سامان, Python, HTML, برنامه‌نویس, وب, طراحی, پروژه, سامان مجیدی, Saman, Saman Majidi">
+  <!-- Primary SEO -->
+  <meta name="description" content="سامان — برنامه‌نویس علاقه‌مند به پایتون، وب و طراحی. نمونه‌کارها، مهارت‌ها و راه‌های تماس.">
+  <meta name="keywords" content="سامان, Python, HTML, برنامه‌نویس, وب, طراحی, پروژه, Saman">
   <meta name="author" content="Saman">
   <meta name="robots" content="index, follow">
-  
-  <!-- Open Graph / Twitter -->
+
+  <!-- Open Graph / Twitter (will be updated on language switch) -->
   <meta property="og:site_name" content="Saman">
   <meta property="og:title" content="سامان — برنامه‌نویس">
   <meta property="og:description" content="برنامه‌نویس علاقه‌مند به Python، ساخت وب و پروژه‌های خلاقانه.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://saman-page.vercel.app/">
-  <meta property="og:image" content="https://saman-page.vercel.app/preview.jpg">
+  <meta property="og:image" content="https://saman-page.vercel.app/preview.webp">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="سامان — برنامه‌نویس">
   <meta name="twitter:description" content="برنامه‌نویس علاقه‌مند به Python، ساخت وب و پروژه‌های خلاقانه.">
-  <meta name="twitter:image" content="https://saman-page.vercel.app/preview.jpg">
+  <meta name="twitter:image" content="https://saman-page.vercel.app/preview.webp">
 
-  <!-- Language alternates (update href to your real URLs) -->
+  <!-- Canonical + hreflang for proper multi-lingual indexing -->
   <link rel="canonical" href="https://saman-page.vercel.app/">
   <link rel="alternate" hreflang="fa" href="https://saman-page.vercel.app/">
-  <link rel="alternate" hreflang="en" href="https://saman-page.vercel.app/">
+  <link rel="alternate" hreflang="en" href="https://saman-page.vercel.app/en/">
+  <link rel="alternate" hreflang="x-default" href="https://saman-page.vercel.app/">
 
-  <!-- Fonts (preconnect for performance) -->
+  <!-- Performance: preconnect & preload critical assets -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&family=Inter:wght@300;400;600;700&display=swap" as="style">
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <meta name="google-site-verification" content="xFKwlztwFGX5ZcU2D15twIH5Pxlh5inVXt12MHOVS6g" />
+
+  <link rel="preload" href="/profile.jpg" as="image">
+  <link rel="preload" href="/preview.webp" as="image">
+
+  <!-- Minimal, optimized critical CSS (keeps visual, reduces render-blocking) -->
   <style>
-    :root{--bg:#0f1724;--card:#0b1220;--muted:#94a3b8;--accent:#6ee7b7;--glass:rgba(255,255,255,0.04);--glass-2:rgba(255,255,255,0.02);--radius:14px}
+    :root{--bg:#0f1724;--card:#0b1220;--muted:#94a3b8;--accent:#6ee7b7;--glass:rgba(255,255,255,0.03);--glass-2:rgba(255,255,255,0.02);--radius:12px}
     *{box-sizing:border-box}
     html,body{height:100%}
-    body{margin:0;font-family:'Vazirmatn',Inter,system-ui,-apple-system,sans-serif;background:linear-gradient(180deg,#0b1220 0%, #081023 100%);color:#e6eef6;-webkit-font-smoothing:antialiased;line-height:1.55;padding:28px}
-    .wrap{max-width:1000px;margin:0 auto;position:relative;min-height:calc(100vh - 56px)}
-    header{display:flex;gap:18px;align-items:center;justify-content:space-between;margin-bottom:22px}
-    .brand{display:flex;gap:14px;align-items:center}
-    .avatar{width:80px;height:80px;border-radius:12px;overflow:hidden;border:2px solid rgba(255,255,255,0.06);flex-shrink:0}
+    body{margin:0;font-family:'Vazirmatn',Inter,system-ui,-apple-system,sans-serif;background:linear-gradient(180deg,#0b1220 0%, #081023 100%);color:#e6eef6;-webkit-font-smoothing:antialiased;line-height:1.6;padding:20px}
+    .wrap{max-width:980px;margin:0 auto;position:relative;min-height:calc(100vh - 40px)}
+    header{display:flex;gap:14px;align-items:center;justify-content:space-between;margin-bottom:18px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .avatar{width:72px;height:72px;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,0.04);flex-shrink:0}
     .avatar img{width:100%;height:100%;object-fit:cover;display:block}
-    h1{font-size:20px;margin:0}
-    h2{font-size:18px;margin:0 0 8px 0}
+    h1{font-size:18px;margin:0}
+    h2{font-size:16px;margin:0 0 8px 0}
     .lang-switch{display:flex;gap:8px;align-items:center}
     .lang-switch button{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:10px;color:var(--muted);cursor:pointer;font-weight:600}
     .lang-switch button.active{background:var(--accent);color:#042018;border:none}
-    main{display:grid;grid-template-columns:1fr 360px;gap:24px}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:16px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(0,0,0,0.6)}
+    main{display:grid;grid-template-columns:1fr 320px;gap:20px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:14px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(0,0,0,0.55)}
     .muted{color:var(--muted)}
-    .skills-list{display:flex;flex-direction:column;gap:12px}
+    .skills-list{display:flex;flex-direction:column;gap:10px}
     .skill{display:flex;flex-direction:column;gap:6px}
     .skill .meta{display:flex;justify-content:space-between;font-size:13px;color:var(--muted)}
     .progress{height:10px;background:var(--glass-2);border-radius:999px;overflow:hidden}
-    .progress>i{display:block;height:100%;width:0%;background:linear-gradient(90deg,var(--accent),#60a5fa);border-radius:999px;transition:width .9s cubic-bezier(.2,.9,.3,1)}
-    .projects{display:grid;gap:12px}
-    .project{display:flex;gap:12px;align-items:flex-start;padding:10px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));border:1px solid rgba(255,255,255,0.03)}
-    .project .thumb{width:88px;height:60px;border-radius:8px;overflow:hidden;flex-shrink:0}
+    .progress>i{display:block;height:100%;width:0%;background:linear-gradient(90deg,var(--accent),#60a5fa);border-radius:999px;transition:width .8s cubic-bezier(.2,.9,.3,1)}
+    .projects{display:grid;gap:10px}
+    .project{display:flex;gap:10px;align-items:flex-start;padding:10px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));border:1px solid rgba(255,255,255,0.03)}
+    .project .thumb{width:84px;height:56px;border-radius:8px;overflow:hidden;flex-shrink:0}
     .project .thumb img{width:100%;height:100%;object-fit:cover;display:block}
     .side{display:flex;flex-direction:column;gap:12px}
-    @media (max-width:880px){main{grid-template-columns:1fr}.avatar{width:72px;height:72px}h1{font-size:16px}}
-    .float-layer{pointer-events:none;position:fixed;inset:0;z-index:0;overflow:hidden}
-    .float-item{position:absolute;border-radius:999px;opacity:0.9;mix-blend-mode:screen}
-    .reveal{opacity:0;transform:translateY(8px);transition:opacity .6s ease, transform .6s cubic-bezier(.2,.9,.3,1)}
+    @media (max-width:880px){main{grid-template-columns:1fr}.avatar{width:64px;height:64px}h1{font-size:16px}}
+    .reveal{opacity:0;transform:translateY(8px);transition:opacity .5s ease, transform .5s cubic-bezier(.2,.9,.3,1)}
     .reveal.show{opacity:1;transform:none}
-    /* accessibility helper */
     .sr-only{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
+
+    /* reduce heavy visual effects for performance */
+    .float-layer{pointer-events:none;position:fixed;inset:0;z-index:0;overflow:hidden}
+    .float-item{position:absolute;border-radius:999px;opacity:0.9;mix-blend-mode:screen;filter:blur(6px);opacity:0.12}
+  </style>
+
+  <!-- Structured Data: Person + WebSite + WebPage + FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://saman-page.vercel.app/#person",
+        "name": "Saman",
+        "alternateName": "سامان",
+        "jobTitle": "Developer",
+        "url": "https://saman-page.vercel.app/",
+        "image": "https://saman-page.vercel.app/preview.webp",
+        "sameAs": ["https://github.com/yourusername","https://linkedin.com/in/yourusername"],
+        "knowsAbout": ["Python","Web Development","HTML","JavaScript"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://saman-page.vercel.app/#website",
+        "url": "https://saman-page.vercel.app/",
+        "name": "Saman",
+        "publisher": {"@id":"https://saman-page.vercel.app/#person"}
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://saman-page.vercel.app/#webpage",
+        "url": "https://saman-page.vercel.app/",
+        "inLanguage": "fa",
+        "name": "بیوگرافی سامان",
+        "isPartOf": {"@id":"https://saman-page.vercel.app/#website"}
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type":"Question","name":"چطور با تو تماس بگیرم؟","acceptedAnswer":{"@type":"Answer","text":"با ارسال ایمیل به you@example.com یا استفاده از فرم تماس در سایت."}},
+          {"@type":"Question","name":"چه تکنولوژی‌هایی بلدی؟","acceptedAnswer":{"@type":"Answer","text":"Python، HTML/CSS، JavaScript و فریم‌ورک‌های وب."}}
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Accessibility helpers -->
+  <style>
+    a{color:inherit}
+    a:focus{outline:3px solid rgba(110,231,183,0.18);outline-offset:2px}
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
       <div class="brand">
-        <div class="avatar"><img src="profile.jpg" alt="تصویر سامان" loading="lazy"></div>
+        <div class="avatar" aria-hidden="true"><img src="/profile.jpg" alt="تصویر سامان" loading="lazy" width="200" height="200"></div>
         <div>
-          <!-- single h1: update its text via JS when language changes -->
           <h1 id="page-title">سامان — برنامه‌نویس</h1>
           <div class="muted" id="role">علاقه‌مند به Python، وب و طراحی</div>
         </div>
       </div>
 
-      <div class="lang-switch" role="tablist" aria-label="زبان">
+      <nav class="lang-switch" role="tablist" aria-label="زبان">
         <button id="btn-fa" class="active" role="tab" aria-selected="true" aria-controls="content-fa">فارسی</button>
         <button id="btn-en" role="tab" aria-selected="false" aria-controls="content-en">English</button>
-      </div>
+      </nav>
     </header>
 
     <main>
       <section>
-        <div class="card intro reveal" id="content-fa" lang="fa">
+        <article class="card intro reveal" id="content-fa" lang="fa">
           <h2>درباره من</h2>
           <p id="bio-fa">سلام! من سامان هستم؛ علاقه‌مند به ساخت وب‌سایت‌ها و پروژه‌های خلاقانه. بیشتر با Python و HTML کار می‌کنم و همیشه دنبال یادگیری و بهبودم.</p>
-        </div>
+        </article>
 
-        <div class="card intro reveal" id="content-en" lang="en" style="display:none">
+        <article class="card intro reveal" id="content-en" lang="en" style="display:none">
           <h2>About me</h2>
           <p id="bio-en">Hi! I’m Saman. I love building websites and creative projects. I mostly work with Python and HTML and I’m always improving my skills.</p>
-        </div>
+        </article>
 
-        <div class="card reveal" aria-labelledby="skills-heading">
+        <section class="card reveal" aria-labelledby="skills-heading">
           <h2 id="skills-heading">مهارت‌ها / Skills</h2>
-          <div class="skills-list" id="skillsContainer">
-            <!-- JS generated -->
-          </div>
+          <div class="skills-list" id="skillsContainer" aria-live="polite"></div>
           <noscript class="muted">برای دیدن مهارت‌ها، جاوااسکریپت باید فعال باشد.</noscript>
-        </div>
+        </section>
 
-        <div class="card reveal">
+        <section class="card reveal" aria-labelledby="projects-heading">
           <h2 id="projects-heading">پروژه‌ها / Projects</h2>
           <div class="projects" id="projectsContainer"></div>
-        </div>
+        </section>
+
+
 
       </section>
 
       <aside class="side">
         <div class="card contact reveal">
           <h2>اطلاعات تماس / Contact</h2>
-          <div class="muted">Email: <a id="emailLink" href="mailto:you@example.com">you@example.com</a></div>
+          <p class="muted">Email: <a id="emailLink" href="mailto:you@example.com">you@example.com</a></p>
         </div>
 
         <div class="card reveal">
           <h2>فرم تماس / Contact Form</h2>
-          <form action="https://formspree.io/f/xzzvlkrq" method="POST" class="contact-form" style="display:flex;flex-direction:column;gap:12px;">
+          <form action="https://formspree.io/f/xzzvlkrq" method="POST" class="contact-form" style="display:flex;flex-direction:column;gap:10px;" aria-label="Contact form">
             <label for="inp-name" class="muted">نام / Name</label>
-            <input id="inp-name" type="text" name="name" required style="padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.08);background:var(--glass);color:#fff;">
+            <input id="inp-name" type="text" name="name" required style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.08);background:var(--glass);color:#fff;">
 
             <label for="inp-email" class="muted">ایمیل / Email</label>
-            <input id="inp-email" type="email" name="email" required style="padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.08);background:var(--glass);color:#fff;">
+            <input id="inp-email" type="email" name="email" required style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.08);background:var(--glass);color:#fff;">
 
             <label for="inp-message" class="muted">پیام / Message</label>
-            <textarea id="inp-message" name="message" rows="4" required style="padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.08);background:var(--glass);color:#fff;"></textarea>
+            <textarea id="inp-message" name="message" rows="4" required style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.08);background:var(--glass);color:#fff;"></textarea>
 
-            <button type="submit" style="padding:12px;border:none;border-radius:12px;background:var(--accent);color:#042018;font-weight:700;cursor:pointer;">ارسال</button>
+            <button type="submit" style="padding:12px;border:none;border-radius:10px;background:var(--accent);color:#042018;font-weight:700;cursor:pointer;">ارسال</button>
           </form>
+        </div>
+
+        <div class="card reveal">
+          <h2>زبان های مثلت</h2>
+          <ul class="muted" style="margin:0;padding-left:18px;">
+            <li>فارسی</li>
+            <li>English</li>
+            <li>Ein wenig Deutsch(German)</li>
+
+          </ul>
         </div>
       </aside>
     </main>
 
     <div class="float-layer" id="floatLayer" aria-hidden="true"></div>
-
   </div>
 
-  <!-- Structured Data (JSON-LD) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Saman",
-    "alternateName": "سامان",
-    "jobTitle": "Developer",
-    "url": "https://example.com/",
-    "image": "https://example.com/preview.jpg",
-    "sameAs": [
-      "https://github.com/yourusername",
-      "https://linkedin.com/in/yourusername"
-    ],
-    "knowsAbout": ["Python","Web Development","HTML","JavaScript"]
-  }
-  </script>
-
+  <!-- Data for JS (keeps HTML static for crawlers) -->
   <script>
-    /* ---------- Content ---------- */
     const content = {
       fa: {
-        title: 'سامان — برنامه\u200cنویس',
+        title: 'بیوگرافی سامان | Saman\'s Biography',
         role: 'علاقه\u200cمند به Python، وب و طراحی',
         bio: 'سلام! من سامان هستم؛ علاقه\u200cمند به ساخت وب\u200cسایت\u200cها و پروژه\u200cهای خلاقانه. بیشتر با Python و HTML کار می\u200cکنم و همیشه دنبال یادگیری و بهبودم.'
       },
@@ -186,11 +232,11 @@
     ];
 
     const projects = [
-      {id:1, faTitle:'دبیرستان نخبگان پورسینا', enTitle:'Poursina Nokhbegan High School', descFa:'نسخه بتا سایت مدرسه نخبگان پورسینا', descEn:'Beta version of the Poursina Nokhbegan School website', img:'https://novintexsa.ir/files/favicon.ico', link:'https://novintexsa.ir'},
-      {id:2, faTitle:'آژانس تبلیغاتی Ad Feima+', enTitle:'Ad Feima+ Advertising Agency', descFa:'سایت آژانس تبلیغاتی خودمان', descEn:"Our Advertising Agency's Website", img:'https://ad-feima.vercel.app/files/logo/icon.ico', link:'https://ad-feima.vercel.app'}
+      {id:1, faTitle:'دبیرستان نخبگان پورسینا', enTitle:'Poursina Nokhbegan High School', descFa:'نسخه بتا سایت مدرسه نخبگان پورسینا', descEn:'Beta version of the Poursina Nokhbegan School website', img:'/projects/novintexsa.webp', link:'https://novintexsa.ir'},
+      {id:2, faTitle:'آژانس تبلیغاتی Ad Feima+', enTitle:'Ad Feima+ Advertising Agency', descFa:'سایت آژانس تبلیغاتی خودمان', descEn:"Our Advertising Agency's Website", img:'/projects/adfeima.webp', link:'https://ad-feima.vercel.app'}
     ];
 
-    /* ---------- Language toggle ---------- */
+    /* ---------- Language toggle & dynamic meta updates ---------- */
     const btnFa = document.getElementById('btn-fa');
     const btnEn = document.getElementById('btn-en');
     const pageTitle = document.getElementById('page-title');
@@ -198,27 +244,56 @@
     const contentFa = document.getElementById('content-fa');
     const contentEn = document.getElementById('content-en');
 
+    function updateMeta(lang){
+      const head = document.head;
+      const desc = head.querySelector("meta[name='description']");
+      const ogTitle = head.querySelector("meta[property='og:title']");
+      const ogDesc = head.querySelector("meta[property='og:description']");
+      const twitterTitle = head.querySelector("meta[name='twitter:title']");
+      const twitterDesc = head.querySelector("meta[name='twitter:description']");
+
+      if(lang==='fa'){
+        document.title = content.fa.title;
+        desc.setAttribute('content','سامان — برنامه\u200cنویس علاقه\u200cمند به پایتون، وب و طراحی.');
+        ogTitle.setAttribute('content','سامان — برنامه\u200cنویس');
+        ogDesc.setAttribute('content','برنامه\u200cنویس علاقه\u200cمند به Python، ساخت وب و پروژه\u200cهای خلاقانه.');
+        twitterTitle.setAttribute('content','سامان — برنامه\u200cنویس');
+        twitterDesc.setAttribute('content','برنامه\u200cنویس علاقه\u200cمند به Python، ساخت وب و پروژه\u200cهای خلاقانه.');
+        document.documentElement.lang='fa'; document.body.dir='rtl';
+      } else {
+        document.title = content.en.title;
+        desc.setAttribute('content','Saman — Developer interested in Python, web and design.');
+        ogTitle.setAttribute('content','Saman — Developer');
+        ogDesc.setAttribute('content','Developer interested in Python, building websites and creative projects.');
+        twitterTitle.setAttribute('content','Saman — Developer');
+        twitterDesc.setAttribute('content','Developer interested in Python, building websites and creative projects.');
+        document.documentElement.lang='en'; document.body.dir='ltr';
+      }
+
+      // set canonical depending on language (helps search engines)
+      const canonical = head.querySelector("link[rel='canonical']");
+      canonical.href = lang==='fa' ? 'https://saman-page.vercel.app/' : 'https://saman-page.vercel.app/en/';
+    }
+
     function setLang(lang){
       const isFa = lang==='fa';
-      document.documentElement.lang = isFa? 'fa' : 'en';
-      document.body.dir = isFa? 'rtl' : 'ltr';
-      // update visible content
       contentFa.style.display = isFa? 'block' : 'none';
       contentEn.style.display = isFa? 'none' : 'block';
       pageTitle.innerText = isFa? content.fa.title : content.en.title;
       roleEl.innerText = isFa? content.fa.role : content.en.role;
       document.getElementById(isFa? 'bio-fa' : 'bio-en').innerText = isFa? content.fa.bio : content.en.bio;
-
       btnFa.classList.toggle('active', isFa);
       btnEn.classList.toggle('active', !isFa);
       btnFa.setAttribute('aria-selected', isFa);
       btnEn.setAttribute('aria-selected', !isFa);
-
-      // re-render lists
       renderSkills(isFa? 'fa' : 'en');
       renderProjects(isFa? 'fa' : 'en');
+      updateMeta(isFa? 'fa' : 'en');
 
-      // re-run reveal observer
+      // update structured data language tag (basic)
+      try{ const ld = document.querySelector('script[type=application/ld+json]'); if(ld) ld.innerText = ld.innerText.replace(/"inLanguage": "(fa|en)"/, '"inLanguage": "'+(isFa?'fa':'en')+'"'); }catch(e){}
+
+      // re-run reveal observers
       revealObserver && revealObserver.disconnect();
       setupReveal();
     }
@@ -226,7 +301,7 @@
     btnFa.addEventListener('click', ()=> setLang('fa'));
     btnEn.addEventListener('click', ()=> setLang('en'));
 
-    /* ---------- render skills/projects ---------- */
+    /* ---------- render helpers ---------- */
     const skillsContainer = document.getElementById('skillsContainer');
     const projectsContainer = document.getElementById('projectsContainer');
 
@@ -235,14 +310,14 @@
       for(const s of skills){
         const name = lang==='fa'? s.fa : s.en;
         const el = document.createElement('div'); el.className='skill';
-        el.innerHTML = `\n          <div class=\"meta\"><span>${name}</span><span>${s.level}%</span></div>\n          <div class=\"progress\"><i data-level=\"${s.level}\" aria-hidden=\"true\"></i></div>\n        `;
+        el.innerHTML = `\n          <div class="meta"><span>${name}</span><span>${s.level}%</span></div>\n          <div class="progress"><i data-level="${s.level}" aria-hidden="true"></i></div>\n        `;
         skillsContainer.appendChild(el);
       }
       requestAnimationFrame(()=>{
         document.querySelectorAll('.progress > i').forEach(i=>{
           const w = i.dataset.level + '%';
           i.style.width = '0%';
-          setTimeout(()=> i.style.width = w, 300);
+          setTimeout(()=> i.style.width = w, 250);
         })
       });
     }
@@ -253,12 +328,12 @@
         const title = lang==='fa'? p.faTitle : p.enTitle;
         const desc = lang==='fa'? p.descFa : p.descEn;
         const card = document.createElement('article'); card.className='project';
-        card.innerHTML = `\n          <div class=\"thumb\"><img src=\"${p.img}\" alt=\"${title}\" loading=\"lazy\"></div>\n          <div class=\"meta\">\n            <h3>${title}</h3>\n            <p>${desc}</p>\n            <a href=\"${p.link}\" target=\"_blank\" rel=\"noopener noreferrer\">${lang==='fa'? 'مشاهده' : 'View'}</a>\n          </div>\n        `;
+        card.innerHTML = `\n          <div class="thumb"><img src="${p.img}" alt="${title}" loading="lazy" width="300" height="200"></div>\n          <div class="meta">\n            <h3>${title}</h3>\n            <p class="muted">${desc}</p>\n            <a href="${p.link}" target="_blank" rel="noopener noreferrer">${lang==='fa'? 'مشاهده' : 'View'}</a>\n          </div>\n        `;
         projectsContainer.appendChild(card);
       }
     }
 
-    /* ---------- reveal on scroll ---------- */
+    /* ---------- reveal on scroll (lightweight) ---------- */
     let revealObserver;
     function setupReveal(){
       const reveals = document.querySelectorAll('.reveal');
@@ -268,30 +343,32 @@
       reveals.forEach(r=>revealObserver.observe(r));
     }
 
-    /* ---------- floating animation (lighter by default) ---------- */
-    function makeFloating(count=6){ // lowered default for performance
+    /* ---------- lightweight floating animation using requestIdleCallback ---------- */
+    function makeFloating(count=4){
       const container = document.getElementById('floatLayer');
       container.innerHTML='';
       const colors = ['#6ee7b7','#60a5fa','#f472b6','#fbbf24'];
       for(let i=0;i<count;i++){
         const el = document.createElement('div'); el.className='float-item';
-        const size = 40 + Math.round(Math.random()*100);
+        const size = 30 + Math.round(Math.random()*60);
         el.style.width = size+'px'; el.style.height = size+'px';
         el.style.left = Math.random()*100 + '%'; el.style.top = Math.random()*100 + '%';
-        el.style.background = colors[i % colors.length]; el.style.filter = 'blur(18px)';
-        el.style.opacity = 0.12 + Math.random()*0.35; const dur = 8 + Math.random()*12; el.style.transition = `transform ${dur}s linear`;
+        el.style.background = colors[i % colors.length];
         container.appendChild(el);
-        (function loop(e,d){ const tx = (Math.random()-0.5)*120; const ty = (Math.random()-0.5)*120; e.style.transform = `translate(${tx}px, ${ty}px)`; setTimeout(()=> loop(e,d), d*1000); })(el,dur);
+        (function loop(e){ const tx = (Math.random()-0.5)*80; const ty = (Math.random()-0.5)*80; e.style.transform = `translate(${tx}px, ${ty}px)`; setTimeout(()=> loop(e), 8000 + Math.random()*8000); })(el);
       }
     }
 
     /* ---------- init ---------- */
     window.addEventListener('load', ()=>{
-      setLang('fa');
+      // set default language based on browser or fallback to fa
+      const userLang = navigator.language || navigator.userLanguage || 'fa';
+      setLang(userLang.startsWith('en') ? 'en' : 'fa');
       setupReveal();
-      const floatCount = 6; // performance-friendly default
-      makeFloating(floatCount);
-      let resizeTimeout; window.addEventListener('resize', ()=>{ clearTimeout(resizeTimeout); resizeTimeout = setTimeout(()=> makeFloating(floatCount), 300); });
+      if('requestIdleCallback' in window) requestIdleCallback(()=> makeFloating(4)); else setTimeout(()=> makeFloating(4), 800);
+      // accessibility: prefer-reduced-motion
+      const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+      if(mq.matches){ document.getElementById('floatLayer').style.display='none'; }
     });
 
   </script>
