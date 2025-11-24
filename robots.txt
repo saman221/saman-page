@@ -1,0 +1,8 @@
+
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Allow: /
+
+
+Sitemap: https://saman-page.vercel.app/sitemap.xml
